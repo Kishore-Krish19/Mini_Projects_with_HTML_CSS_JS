@@ -28,19 +28,3 @@ function important(item){
     (t)? item.className = "imp" : item.className = "li";
     t= !t;
 }
-
-function doAbout() {
-    divabout.innerText = "This ToDo list is created by Kishore";
-    AdBUT.value="Clear About";
-}
-
-function clearAbout() {
-    divabout.innerText = "";
-    AdBUT.value="About";
-}
-
-let f=true;
-function AbBut(){
-    (f)? doAbout():clearAbout();
-    f= !f;
-}

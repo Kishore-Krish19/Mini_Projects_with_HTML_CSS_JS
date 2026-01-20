@@ -3,19 +3,26 @@
 
 <head>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+    <style>body{font-family: 'Manrope', system-ui, -apple-system, sans-serif;}</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo_List</title>
 </head>
 
 <body id="b">
+    <a href="../index.html" class="home-btn">← Back to Home</a>
     <script src="function.js"></script>
-    <h1 id="myHeader">TO DO List</h1>
+    <div id="header-wrap">
+        <h1 id="myHeader">TO DO List</h1>
+    </div>
     <hr>
 
-    <input type="text" id="input" placeholder="Enter task ..." />
-    <br>
-    <input type="button" id="addButton" value="Add task" onclick='addTask()' />
+    <div class="add-row">
+        <input type="text" id="input" placeholder="Enter task ..." />
+        <input type="button" id="addButton" value="Add task" onclick='addTask()' />
+    </div>
 
     <hr>
     <ul id="tasks">
@@ -28,13 +35,11 @@
 
     </ul>
     <hr>
-    <input id="AdBUT" type="button" value="About" onclick="AbBut()" />
-    <!-- <input type="button" value="Clear" onclick="clearAbout()" /> -->
-    <hr>
-    <div id="divabout">
-    </div>
+    <footer class="pro-footer" style="margin-top:320px;text-align:center;background:rgba(255,255,255,0.04);border-top:1px solid rgba(255,255,255,0.08);color:#e5e7eb;padding:2rem 0;">
+        <div id="footer-content"></div>
+    </footer>
 
-
+    <script src="../landing.js"></script>
 </body>
 
 </html>

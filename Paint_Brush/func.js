@@ -1,7 +1,7 @@
 var paintcanvas = document.getElementById("canvas1");
 var context = paintcanvas.getContext("2d");
 var color = 'black';
-var radius = 50;
+var radius = 10;
 // only paint if mouse is being dragged (moved while the button is pressed) 
 var isPainting = false;
 var can=document.querySelector("canvas");

@@ -1,0 +1,82 @@
+/* remove indentation of list items */
+#b{
+  background-color: black;
+}
+#myHeader {
+  background-color: aqua;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  display: inline-table ;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+li {
+  list-style-type: none;
+  background-color: #eee;
+  border: 1px solid #c3c3c3;
+  padding: 10px 0px 10px 5px;
+  font-size: 30px;
+}
+
+.done {
+  background-color: green;
+  cursor: pointer;
+}
+
+.remove {
+  background-color: red;
+  cursor: pointer;
+}
+
+.important {
+  background-color: aqua;
+  width: 43px;
+  height: 52px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.imp {
+  background-color: aqua;
+  font-weight: bold;
+}
+
+li.finished {
+  color: white;
+  background-color: gray;
+  text-decoration: line-through;
+}
+
+input[type="text"] {
+  font-size: 20px;
+  width:auto;
+  padding: 10px;
+  align-content:center;
+  
+}
+
+input[type="button"] {
+  font-size: 1.15em;
+  margin: -4px 4px 0px 1px;
+}
+
+#addButton {
+  background-color: rgb(54, 234, 18);
+  padding: 10px;
+  margin: 6px 0px;
+}
+
+#AdBUT{
+  margin: 2px;
+  background-color: rgb(242, 255, 1);
+}
+
+#divabout {
+  background-color: rgb(0, 170, 255);
+  color: rgb(0, 0, 0);
+  display:inline-table;
+  font-size: 30px;
+  margin: 10px;
+}

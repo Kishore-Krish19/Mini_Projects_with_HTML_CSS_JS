@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo_List</title>
+</head>
+
+<body id="b">
+    <script src="function.js"></script>
+    <h1 id="myHeader">TO DO List</h1>
+    <hr>
+
+    <input type="text" id="input" placeholder="Enter task ..." />
+    <br>
+    <input type="button" id="addButton" value="Add task" onclick='addTask()' />
+
+    <hr>
+    <ul id="tasks">
+        <li>
+            <input type="button" class="done" onclick="markDone(this.parentNode)" value="&#x2713;" />
+            <input type="button" class="remove" onclick="remove(this.parentNode)" value="&#x2715;" />
+            <input type="button" class="important" onclick="important(this.parentNode)" value="&#33;" />
+            Make ToDo List
+        </li>
+
+    </ul>
+    <hr>
+    <input id="AdBUT" type="button" value="About" onclick="AbBut()" />
+    <!-- <input type="button" value="Clear" onclick="clearAbout()" /> -->
+    <hr>
+    <div id="divabout">
+    </div>
+
+
+</body>
+
+</html>

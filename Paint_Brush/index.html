@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="Style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint_Brush</title>
+</head>
+
+<body>
+    <h1>Paint Brush</h1>
+    <hr>
+    <P>Set Width <input id="inpid1" type="number" onchange="setWidth(this.value)" />
+        Set Height <input id="inpid2" type="number" onchange="setHeight(this.value)" />
+    <p>Brush Color <input type="color" value="#000" onchange="setColor(this.value)" />
+    <p>Brush Size <input type="range" id="sizeInput" min="1" max="50" value="50" oninput="resizeBrush(this.value)" />
+        <output id="sizeOutput"> 50 </output>
+    </p>
+    </p>
+    </P>
+    <canvas id="canvas1" onmousedown="startPaint()" width="400pt" height="150pt"
+        onmousemove="doPaint(event.offsetX,event.offsetY)" onmouseup="endPaint()">
+    </canvas>
+    <p>
+        <input type="button" id="clear" value="Clear Page" onclick="clearCanvas()" />
+    </p>
+    <script src="func.js"></script>
+</body>
+
+</html>

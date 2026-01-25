@@ -46,8 +46,9 @@
         </section>
 
         <section class="canvas-wrap">
-            <canvas id="canvas1" onmousedown="startPaint()" width="1000" height="400"
-                onmousemove="doPaint(event.offsetX,event.offsetY)" onmouseup="endPaint()"></canvas>
+            <canvas id="canvas1" width="1000" height="400"
+                onmousedown="startPaint(event)" onmousemove="doPaint(event)" onmouseup="endPaint(event)" onmouseleave="endPaint(event)"
+                ontouchstart="startPaint(event)" ontouchmove="doPaint(event)" ontouchend="endPaint(event)"></canvas>
         </section>
     </main>
 

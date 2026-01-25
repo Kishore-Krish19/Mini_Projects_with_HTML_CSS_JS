@@ -91,6 +91,7 @@ li {
 .imp {
   background-color: aqua;
   font-weight: bold;
+  color: black;
 }
 
 li.finished {

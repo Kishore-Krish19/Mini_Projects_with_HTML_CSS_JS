@@ -2,54 +2,77 @@ var paintcanvas = document.getElementById("canvas1");
 var context = paintcanvas.getContext("2d");
 var color = 'black';
 var radius = 10;
-// only paint if mouse is being dragged (moved while the button is pressed) 
+// only paint if mouse is being dragged (moved while the button is pressed)
 var isPainting = false;
-var can=document.querySelector("canvas");
+var can = document.querySelector("canvas");
 
 function setWidth(value) {
-    can.width=value;
+    can.width = value;
 }
+
 function setHeight(value) {
-    can.height=value;
+    can.height = value;
 }
 
 function clearCanvas() {
     context.clearRect(0, 0, paintcanvas.width, paintcanvas.height);
 }
 
-function startPaint(){
-    isPainting=true;
+function getPosFromEvent(e) {
+    var rect = paintcanvas.getBoundingClientRect();
+    var clientX, clientY;
+    if (e.touches && e.touches.length) {
+        clientX = e.touches[0].clientX;
+        clientY = e.touches[0].clientY;
+    } else {
+        clientX = e.clientX;
+        clientY = e.clientY;
+    }
+    // account for CSS scaling of canvas
+    var scaleX = paintcanvas.width / rect.width;
+    var scaleY = paintcanvas.height / rect.height;
+    var x = (clientX - rect.left) * scaleX;
+    var y = (clientY - rect.top) * scaleY;
+    return { x: x, y: y };
 }
 
-function endPaint(){
-    isPainting=false;
+function startPaint(e) {
+    isPainting = true;
+    if (e && e.preventDefault) e.preventDefault();
+    var pos = getPosFromEvent(e || window.event);
+    paintCircle(pos.x, pos.y);
 }
 
-function doPaint(x,y){
-    if(isPainting)
-        paintCircle(x,y);
+function endPaint(e) {
+    isPainting = false;
 }
 
-function setColor(newColor){
-    color=newColor;
+function doPaint(e) {
+    if (!e) return;
+    if (e.preventDefault) e.preventDefault();
+    if (isPainting) {
+        var pos = getPosFromEvent(e);
+        paintCircle(pos.x, pos.y);
+    }
 }
-function resizeBrush(newSize){
-    radius=newSize;
-    document.getElementById("sizeOutput").value=newSize;
+
+function setColor(newColor) {
+    color = newColor;
+}
+
+function resizeBrush(newSize) {
+    radius = newSize;
+    document.getElementById("sizeOutput").value = newSize;
 }
 
 function paintCircle(x, y) {
-    // make sure to start a new circle each time 
     context.beginPath();
-    // draw circle using a complete (2*PI) arc around given point 
     context.arc(x, y, radius, 0, Math.PI * 2, true);
     context.fillStyle = color;
     context.fill();
 }
 
-// verify the given value is actually a number 
+// verify the given value is actually a number
 function isNumeric(value) {
-    // standard JavaScript function to determine whether a string is an illegal number 
-    (Not - a - Number)
     return !isNaN(value);
 }

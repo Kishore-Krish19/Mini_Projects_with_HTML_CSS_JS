@@ -2,7 +2,7 @@
 
 Welcome to **Mini Projects with HTML, CSS & JavaScript** — a collection of small interactive web projects built using pure HTML, CSS, and JavaScript. These projects are great for beginners to learn front-end web development and build hands-on experience with real browser interactions.
 
-Live Demo 👉 https://kishore-krish19.github.io/Mini_Projects_with_HTML_CSS_JS/ :contentReference[oaicite:0]{index=0}
+Live Demo 👉 https://kishore-krish19.github.io/Mini_Projects_with_HTML_CSS_JS
 
 ---
 
@@ -58,7 +58,7 @@ Mini_Projects_with_HTML_CSS_JS/
 
 You can run any project instantly online — click on a card to open each tool directly:
 
-🔗 https://kishore-krish19.github.io/Mini_Projects_with_HTML_CSS_JS/ :contentReference[oaicite:2]{index=2}
+🔗 https://kishore-krish19.github.io/Mini_Projects_with_HTML_CSS_JS
 
 ---
 
